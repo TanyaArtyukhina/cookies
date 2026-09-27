@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    /*обнулили внутренние отступы*/
+    padding: 0;
+    /*обнулили внешние отступы*/
+}
+
+/*подключили шрифты*/
+@font-face {
+    font-family: 'Steppe-Book';
+    src: url('../fonts/Steppe-Book.ttf');
+}
+
+@font-face {
+    font-family: 'Steppe-ExtraBold';
+    src: url('../fonts/Steppe-ExtraBold.ttf');
+}
+
+/*sans-serif - указывается на случай, если шрифт будет не доступен,
+тогда система сама подберет альтернативу*/
+body {
+    background-color: #5243F4;
+    font-family: 'Steppe-Book', sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    /*ширина страницы*/
+    margin: 0 auto;
+    /*выравнивание по центру*/
+}
+
+.button {
+    background-color: white;
+    border-radius: 60px;
+    width: 178px;
+    height: 58px;
+    box-sizing: border-box;
+    /*задать внутренние размеры*/
+    padding: 18px;
+    text-align: center;
+    /*разместить запись по центру*/
+    font-size: 18px;
+    color: #5243F4;
+    border: 0;
+    outline: none;
+    /*чтобы не появлялся фокус от браузера*/
+    cursor: pointer;
+}
+
+.violet-button {
+    background-color: #5243F4;
+    color: white;
+}
+
+.button:hover {
+    background-color: #eeeeee;
+}
+
+.button.violet-button:hover {
+    background-color: #3b2cd8;
+}
+
+.common-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+}
+
+.currency {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border: 1px solid white;
+    padding: 5px 10px;
+    height: 25px;
+    min-width: 25px;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 28px;
+    z-index: 1;
+    user-select: none;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.header {
+    padding: 40px 0;
+    /*отступ по краям по 40, сверху и снизу - 0*/
+}
+
+/*будет применяться к контейнеру который находится в header*/
+.header .container {
+    display: flex;
+    /*отображение в одну строку*/
+    align-items: center;
+    /*выравнивание по вертикали по центру*/
+}
+
+.logo .img {
+    vertical-align: bottom;
+    /*картинка правильно отображается и располагается ровно по центру блока*/
+}
+
+.menu {
+    margin-left: 250px;
+    /*отступ слева*/
+}
+
+.menu-list {
+    list-style: none;
+    /*убрать точки возле цифр*/
+    display: flex;
+    /*выравнивание в строку в гибком контейрнере*/
+    gap: 50px;
+    /*отступ между пунктами меню*/
+}
+
+.menu-item a {
+    font-size: 16px;
+    /*размер шрифта*/
+    line-height: 130%;
+    /*высота строки*/
+    text-decoration: none;
+    /*убрать подчеркивание у ссылок*/
+    cursor: pointer;
+    /*при наведении кликающая рука*/
+    color: white;
+}
+
+/*прописываем какие стили будут применяться при наведении*/
+.menu-item a:hover {
+    border-bottom: 2px solid white;
+    /*белая полоска снизу при наведении*/
+}
+
+
+.main-content {
+    padding-top: 161px;
+    /*отступ сверху*/
+    padding-bottom: 200px;
+    /*отступ снизу*/
+}
+
+.main-info {
+    max-width: 811px;
+    /*максимальная ширина, после которой будет перенос*/
+}
+
+.main-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 90px;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+.main-text {
+    max-width: 690px;
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 40px;
+}
+
+.main-image {
+    position: absolute;
+    /*указываем позиционирование, чтобы вырвать его из сетки и сделать висящим*/
+    top: 0;
+    /*отступ сверху 0*/
+    right: 0;
+    /*отступ справа 0, чтобы привязался к правому краю*/
+    z-index: -1;
+    /*перемещаем на задний план*/
+}
+
+/*После этой строки добавьте код из 2-ой части бонуса*/
+
+.products {
+    padding: 100px 0;
+    /*0 это отступ справа и слева*/
+    position: relative;
+}
+
+.products-items {
+    display: grid;
+    /* сетка из 6 элементов для карточек товара*/
+    grid-template-columns: repeat(3, 384px);
+    /* используем 3 колонки по 384px каждую*/
+    gap: 90px 24px;
+    /*90 отступ сверху и снизу, 24 - слева и справа*/
+    margin-top: 110px;
+}
+
+.product-item {
+    background-color: white;
+    color: #5D3427;
+    /* цвет текста */
+}
+
+.product-item-image {
+    height: 202px;
+    text-align: center;
+}
+
+.product-item-image img {
+    height: 272px;
+    top: -70px;
+    /* поднимаем картинку вверх на 70 px */
+    position: relative;
+    /* чтобы работал выше указанный код */
+    max-width: 100%;
+    /* макс ширина для картинки */
+}
+
+.products-item-details {
+    padding: 24px;
+    /* внутренний отступ */
+}
+
+.products-item-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.products-item-text {
+    height: 110px;
+    font-size: 14px;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+.products-item-extra {
+    display: flex;
+    /* делаем гибкий контейнер, чтобы текст и кнопка были в одной строке */
+    justify-content: space-between;
+    /* чтобы элементы привязались к разным сторонам и между ними был какой то отступ */
+    align-items: center;
+    /* выровнять по вертикали */
+}
+
+.products-item-price {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    color: #5243F4;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-item-weight {
+    font-size: 12px;
+}
+
+/*После этой строки добавьте код из 3-ей части бонуса*/
+
+
+
+/*!!! эти строки НЕ ТРОГАТЬ, они всегда должны быть самыми последними*/
+.line1 {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: calc(100% - 960px);
+}
+
+.line2 {
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+    left: 0;
+}
+
+.line3 {
+    position: absolute;
+    z-index: -1;
+    top: -920px;
+    left: 0;
+}
