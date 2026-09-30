@@ -275,6 +275,135 @@ body {
 }
 
 /*После этой строки добавьте код из 3-ей части бонуса*/
+.love {
+    padding: 64px 0 150px 0;
+    /* внутренний отступ (сверху справа снизу слева) */
+}
+
+.love-items {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.love-item {
+    width: 590px;
+    height: 453px;
+}
+
+.love-item-white {
+    background-color: white;
+    padding: 110px 80px;
+    box-sizing: border-box;
+    /* чтобы размеры включали отступы padding */
+    color: #5D3427;
+}
+
+.love-item-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 24px;
+    line-height: 110%;
+    margin-bottom: 20px;
+}
+
+.love-item-text {
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.order {
+    padding-bottom: 102px;
+    position: relative;
+}
+
+.order .container {
+    position: relative;
+}
+
+.order-block {
+    margin-top: 103px;
+    background-color: rgb(255 255 255 / 30%);
+    /* делаем прозрачный фон */
+    backdrop-filter: blur(50px);
+    display: flex;
+}
+
+.order-form {
+    margin-left: 200px;
+    max-width: 387px;
+    /* задаем максимальную ширину, чтобы блок не растягивался */
+    padding: 40px 0 44px 0;
+    box-sizing: border-box;
+}
+
+.order-form-text {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.order-form-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.order-form-inputs input {
+    border: 1px solid white;
+    border-radius: 60px;
+    margin-bottom: 16px;
+    padding: 24px 22px;
+    font-size: 18px;
+    width: 385px;
+    height: 68px;
+    background: transparent;
+    /* прозрачный фон */
+    box-sizing: border-box;
+    outline: none;
+    /* чтобы браузер не добавлял подсветку, когда мы работаем с полем */
+    color: white;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    /* указали непрозрачность */
+}
+
+.order-form-inputs .button.violet-button {
+    width: 387px;
+    height: 71px;
+}
+
+.order-block-image {
+    height: 501px;
+    margin-left: 109px;
+}
+
+.order-image {
+    height: 559px;
+    top: -58px;
+    position: relative;
+}
+
+.order-bg-image {
+    position: absolute;
+    top: 0;
+    right: calc(100% - 810px);
+    z-index: -1;
+}
+
+/*После этой строки добавьте код из 4-ой части бонуса*/
+
+.footer {
+    padding: 126px 0 50px 0;
+    text-align: center;
+}
+
+.rights {
+    margin-top: 14px;
+    font-size: 18px;
+    line-height: 130%;
+}
 
 
 
